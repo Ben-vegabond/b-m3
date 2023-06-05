@@ -9,10 +9,9 @@ function generatePassword(){
 
   // Validate password length
   if (length < 8 || length > 128) {
-    alert('INVALID!! FIX THE LENGTH! ');
+    alert('Sorry, but choose a length at start.');
     return;
   }
-
 
   // Validate at least one character type is selected
   if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
@@ -47,25 +46,25 @@ function generatePassword(){
      password += charset[randomIndex];
    }
  
-   return password;
-
+   document.getElementById("password").value = password;
 
 }
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
+// Function to handle generating and displaying the password
+function generateAndDisplayPassword() {
   var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
-
-  // passwordText.value = password;
-
+  if (password === "") {
+    // Password generation was canceled or failed
+    return;
+  }
+  // Display the password in an alert
+  alert("Generated Password:\n" + password);
 }
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
 
+// Get reference to the generate button
+var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generateAndDisplayPassword);
+
+
