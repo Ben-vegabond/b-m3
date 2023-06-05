@@ -1,4 +1,9 @@
-// Assignment code here
+// Get reference to the generate button
+const generateBtn = document.querySelector("#generate");
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", generatePassword);
+
 //funciton to generate random password with the criteria 
 function generatePassword(){
   const length = prompt('Enter the desired length of the password (between 8 and 128 characters):');
@@ -47,24 +52,10 @@ function generatePassword(){
    }
  
    document.getElementById("password").value = password;
-
-}
-
-// Function to handle generating and displaying the password
-function generateAndDisplayPassword() {
-  var password = generatePassword();
-  if (password === "") {
-    // Password generation was canceled or failed
-    return;
-  }
   // Display the password in an alert
   alert("Generated Password:\n" + password);
+
 }
 
-// Get reference to the generate button
-var generateBtn = document.querySelector("#generate");
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", generateAndDisplayPassword);
 
 
