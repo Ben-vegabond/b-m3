@@ -1,4 +1,4 @@
-[Password Generator](./assets/images/Screenshot%202023-05-30%20at%206.41.45%20PM.png)
+![Password Generator](./assets/images/Screenshot%202023-05-30%20at%206.41.45%20PM.png)
 
 # Project b-m3
 
