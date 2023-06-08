@@ -23,7 +23,7 @@ Hello! This is my first attempt on creating a password generator. This allows yo
 **THEN** the password is either displayed in an alert or written to the page
 
 
-## 🌐 How to Operate 
+## 🌐 How to Operate!
 
 Navigation is simple, Here is how to get started:
 
